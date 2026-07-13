@@ -77,7 +77,7 @@ Objetivo: apoiar decisões estratégicas da empresa.
 - Reduzir circulação aleatória.
 - Otimizar a distribuição da frota em função da procura.
 
-https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Vendor.png
+[Ver Vendor](https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Vendor.png)
 ---
 
 #  Dashboard 2 — Employee View
@@ -101,7 +101,7 @@ Objetivo: ajudar os motoristas a aumentar o rendimento por turno.
 - Priorizar viagens de maior duração.
 - Adaptar os turnos aos horários de maior procura.
 
-https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Employee.png
+[Ver Employee](https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Employee.png)
 ---
 
 #  Estrutura do Repositório
