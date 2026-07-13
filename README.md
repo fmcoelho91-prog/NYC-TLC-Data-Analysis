@@ -77,7 +77,7 @@ Objetivo: apoiar decisões estratégicas da empresa.
 - Reduzir circulação aleatória.
 - Otimizar a distribuição da frota em função da procura.
 
-![Vendor Dashboard](images/vendor_dashboard.png)
+[![Vendor Dashboard](images/vendor_dashboard.png)](https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Captura%20de%20ecr%C3%A3%202026-07-13%20214111.png)
 
 ---
 
