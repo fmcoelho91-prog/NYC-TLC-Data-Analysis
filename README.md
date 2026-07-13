@@ -102,7 +102,7 @@ Objetivo: ajudar os motoristas a aumentar o rendimento por turno.
 - Priorizar viagens de maior duração.
 - Adaptar os turnos aos horários de maior procura.
 
-[![Employee Dashboard](images/employee_dashboard.png)](https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Captura%20de%20ecr%C3%A3%202026-07-13%20214041.png)
+[![Employee Dashboard](images/employee_dashboard.png)]([https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Captura%20de%20ecr%C3%A3%202026-07-13%20214041.png](https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Employee.png))
 
 ---
 
