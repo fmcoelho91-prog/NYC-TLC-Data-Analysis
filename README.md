@@ -1,39 +1,136 @@
-# 🚖 NYC Yellow Taxi - Fleet & Revenue Optimization Dashboard
+#  NYC Yellow Taxi | Fleet & Revenue Optimization Dashboard
 
-## Resumo do Projeto
-Este projeto consiste num painel de controlo interativo desenvolvido em **Power BI** para analisar os dados operacionais da Taxi and Limousine Commission (NYC TLC) de Nova Iorque. O objetivo principal foi criar uma ferramenta de duplo impacto:
-1. **Vendor View (Empresa):** Identificar zonas de maior faturação para reduzir 'Dead Miles' (quilómetros a vazio).
-2. **Employee View (Motorista):** Entregar táticas reais para maximizar o ganho por hora e otimizar turnos de condução.
+##  Project Overview
 
-## Tecnologias Utilizadas
-* **Power BI:** Visualização de dados e criação de dashboards.
-* **Power Query (M):** Processamento ETL (Extract, Transform, Load), limpeza de dados (ex: remoção de datas inconsistentes) e separação de timestamps.
-* **DAX:** Criação de métricas financeiras centralizadas e tabelas virtuais (`DATATABLE`).
+Este projeto foi desenvolvido no âmbito do curso de **Data Analyst** e consiste na criação de um dashboard interativo em **Power BI** para analisar a operação da frota de táxis da **New York City Taxi & Limousine Commission (NYC TLC)**.
 
-## Arquitetura de Dados (Star Schema)
-Para garantir alta performance e escalabilidade na leitura de milhões de registos, o modelo foi construído com base num **Star Schema** puro:
-* **Tabela de Factos (`Fact_Trips`):** Centralização dos valores transacionais (distâncias, valores financeiros).
-* **Role-Playing Dimension:** Utilização de relações duplas (ativas e inativas) na tabela de Zonas para cruzar `Pickup` e `Dropoff` sem duplicar a base de dados.
-* **Integridade de Dados:** Utilização de lógicas de segurança em DAX, como a função `DIVIDE`, para isolar erros de divisão por zero causados por anomalias na base de dados original (ex: veículos com 0 milhas registadas).
+O objetivo foi transformar milhões de registos de viagens em informação útil para apoiar decisões de negócio, disponibilizando duas perspetivas distintas:
 
-## 📊 Dashboards & Insights
-
-### 1. Vendor View (Visão da Empresa)
-Foco no aumento de volume e eficiência da frota.
-* **Insight:** Forte concentração de receita em zonas específicas (ex: Lincoln Square East).
-* **Recomendação:** Adoção de uma estratégia de alocação proativa em vez de circulação aleatória, mitigando drasticamente os 'Dead Miles'.
-*(Adiciona aqui a imagem do Vendor View usando este código: `![Vendor Dashboard](images/nome_da_tua_imagem_vendor.png)`)*
-
-### 2. Employee View (Visão do Motorista)
-Foco na rentabilidade real por turno de condução.
-* **Insight:** Viagens mais longas aumentam exponencialmente o rendimento médio (de ~$12 para +$60), eliminando o 'tempo morto' não remunerado entre viagens curtas.
-* **Recomendação:** Priorizar viagens de maior duração e alinhar horários com as janelas de pico (14h-18h).
-*(Adiciona aqui a imagem do Employee View usando este código: `![Employee Dashboard](images/nome_da_tua_imagem_employee.png)`)*
-
-## 📁 Ficheiros Neste Repositório
-* NYC_Taxi_Dashboard.pbix: Ficheiro completo do Power BI.
-* Apresentação_Executiva.pdf: Slides com as recomendações de negócio.
-* /images: Imagens do modelo arquitetónico e dashboards.
+- **Vendor View** – Apoio à gestão da empresa e otimização da frota.
+- **Employee View** – Apoio aos motoristas na maximização dos seus rendimentos.
 
 ---
-*Projeto desenvolvido no âmbito de Análise e Engenharia de Dados.*
+
+#  Business Problem
+
+O projeto procurou responder às seguintes questões:
+
+- Quais são as zonas mais rentáveis para operar?
+- Como reduzir quilómetros percorridos sem passageiros (Dead Miles)?
+- Quais os horários com maior potencial de receita?
+- Que tipo de viagens geram maior rendimento para os motoristas?
+
+---
+
+#  Ferramentas Utilizadas
+
+- Power BI
+- Power Query
+- DAX
+- Data Modelling
+- Star Schema
+
+---
+
+#  Processo de Desenvolvimento
+
+### Preparação dos Dados
+
+- Limpeza dos dados em Power Query
+- Remoção de valores inconsistentes
+- Separação de colunas de data e hora
+- Preparação da tabela de factos
+
+### Modelação
+
+- Construção de um modelo em Star Schema
+- Criação da tabela Fact_Trips
+- Implementação de relações entre dimensões
+- Desenvolvimento de medidas em DAX
+
+### Dashboard
+
+Desenvolvimento de dois dashboards distintos para diferentes perfis de utilizador.
+
+---
+
+#  Dashboard 1 — Vendor View
+
+Objetivo: apoiar decisões estratégicas da empresa.
+
+### Principais Indicadores
+
+- Receita Total
+- Receita por Zona
+- Número de Viagens
+- Distância Percorrida
+- Rentabilidade por Localização
+
+### Principais Descobertas
+
+- Forte concentração da faturação em zonas específicas da cidade.
+- Existência de oportunidades para reduzir Dead Miles através de uma melhor distribuição da frota.
+
+### Recomendações
+
+- Reposicionar veículos para zonas de maior procura.
+- Reduzir circulação aleatória.
+- Otimizar a distribuição da frota em função da procura.
+
+![Vendor Dashboard](images/vendor_dashboard.png)
+
+---
+
+#  Dashboard 2 — Employee View
+
+Objetivo: ajudar os motoristas a aumentar o rendimento por turno.
+
+### Principais Indicadores
+
+- Receita Média por Hora
+- Receita por Distância
+- Horários de Maior Procura
+- Duração Média das Viagens
+
+### Principais Descobertas
+
+- Viagens de maior duração apresentam melhor rendimento médio.
+- O período entre as 14h e as 18h concentra maior potencial de receita.
+
+### Recomendações
+
+- Priorizar viagens de maior duração.
+- Adaptar os turnos aos horários de maior procura.
+
+![Employee Dashboard](images/employee_dashboard.png)
+
+---
+
+#  Estrutura do Repositório
+
+```
+📁 powerbi/
+    NYC_Taxi_Dashboard.pbix
+
+📁 images/
+    vendor_dashboard.png
+    employee_dashboard.png
+
+
+📄 README.md
+```
+
+---
+
+#  Competências Demonstradas
+
+- Power BI
+- Power Query
+- DAX
+- Data Modelling
+- ETL
+- Star Schema
+- Business Intelligence
+- Dashboard Design
+- Data Storytelling
+- Performance Analysis
