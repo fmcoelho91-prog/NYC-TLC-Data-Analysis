@@ -43,7 +43,7 @@ O projeto procurou responder às seguintes questões:
 
 ### Modelação
 
-- Construção de um modelo em Star Schema
+- Construção de um modelo em Star Schema [Star Schema](https://github.com/fmcoelho91-prog/NYC-TLC-Data-Analysis/blob/main/Star%20Schema.png)
 - Criação da tabela Fact_Trips
 - Implementação de relações entre dimensões
 - Desenvolvimento de medidas em DAX
